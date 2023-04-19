@@ -1,5 +1,9 @@
 package main
 
+import "fmt"
+
 func main() {
-	println("hello")
+	fmt.Println("Welcome to IRCTC booking")
+	fmt.Println("GET YOUR TICKETS HERE")
+
 }
