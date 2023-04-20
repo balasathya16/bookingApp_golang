@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Welcome to IRCTC booking")
-	fmt.Println("GET YOUR TICKETS HERE")
 
-	var confName = "conference"
-	fmt.Println(confName)
+	var confName = "IRCTC"
+
+	fmt.Println("Welcome to", confName, "booking")
+	fmt.Println("GET YOUR TICKETS HERE")
 
 }
