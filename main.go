@@ -14,4 +14,10 @@ func main() {
 	fmt.Printf("we have a total of %v tickets and %v are still available\n", confTickets, remainingTickets)
 	fmt.Println("GET YOUR TICKETS HERE")
 
+	var userName string
+
+	userName = "Raj"
+
+	fmt.Printf("name is %v", userName)
+
 }
