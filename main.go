@@ -18,7 +18,7 @@ func main() {
 
 	//var userTickets int
 	// get user name
-
+	fmt.Printf("Enter your name")
 	fmt.Scan(&userName)
 
 	userTickets := 2
