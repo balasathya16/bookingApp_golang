@@ -21,6 +21,8 @@ func main() {
 
 	fmt.Scan(&userName)
 
-	fmt.Printf("name is %v\n", userName)
+	userTickets := 2
+
+	fmt.Printf("Thanks! User %v booked %v tickets\n", userName, userTickets)
 
 }
