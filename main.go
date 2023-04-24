@@ -16,8 +16,11 @@ func main() {
 
 	var userName string
 
-	userName = "Raj"
+	//var userTickets int
+	// get user name
 
-	fmt.Printf("name is %v", userName)
+	fmt.Scan(&userName)
+
+	fmt.Printf("name is %v\n", userName)
 
 }
