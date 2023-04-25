@@ -8,7 +8,7 @@ func main() {
 
 	const confTickets = 40000
 
-	var remainingTickets = 40000
+	var remainingTickets uint = 40000
 
 	fmt.Printf("Welcome to %v booking\n", confName)
 	fmt.Printf("we have a total of %v tickets and %v are still available\n", confTickets, remainingTickets)
@@ -17,7 +17,7 @@ func main() {
 	var firstName string
 	var lastName string
 	var email string
-	var userTickets int
+	var userTickets uint
 
 	// get user name
 	fmt.Printf("Enter your first name: ")
@@ -31,6 +31,8 @@ func main() {
 
 	fmt.Printf("Enter the number of tickets you want: ")
 	fmt.Scan(&userTickets)
+
+	remainingTickets = remainingTickets - userTickets
 
 	fmt.Printf("Thanks %v %v for booking %v tickets. Confirmation email has been sent to %v\n", firstName, lastName, userTickets, email)
 
