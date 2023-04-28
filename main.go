@@ -7,17 +7,12 @@ func main() {
 	var confName = "IPL CSK tickets"
 
 	const confTickets = 40000
-
 	var remainingTickets uint = 40000
+	var booking [50]string
 
 	fmt.Printf("Welcome to %v booking\n", confName)
 	fmt.Printf("we have a total of %v tickets and %v are still available\n", confTickets, remainingTickets)
 	fmt.Println("GET YOUR TICKETS HERE")
-
-	var booking [50]string
-
-	booking[0] = "Bala"
-	booking[10] = "Divya"
 
 	fmt.Printf("%v %v\n", booking[0], booking[10])
 
@@ -40,6 +35,12 @@ func main() {
 	fmt.Scan(&userTickets)
 
 	remainingTickets = remainingTickets - userTickets
+
+	booking[0] = firstName + " " + lastName
+
+	fmt.Printf("whole array: %v\n", booking)
+	fmt.Printf("first val: %v\n", booking[0])
+	fmt.Printf("Type: %T\n", len(booking))
 
 	fmt.Printf("Thanks %v %v for booking %v tickets. Confirmation email has been sent to %v\n", firstName, lastName, userTickets, email)
 
