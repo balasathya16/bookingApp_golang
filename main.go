@@ -41,6 +41,7 @@ func main() {
 	fmt.Printf("whole array: %v\n", booking)
 	fmt.Printf("first val: %v\n", booking[0])
 	fmt.Printf("Type: %T\n", len(booking))
+	tt
 
 	fmt.Printf("Thanks %v %v for booking %v tickets. Confirmation email has been sent to %v\n", firstName, lastName, userTickets, email)
 
