@@ -8,7 +8,7 @@ func main() {
 
 	const confTickets = 40000
 	var remainingTickets uint = 40000
-	var booking []string
+	booking := []string{}
 
 	fmt.Printf("Welcome to %v booking\n", confName)
 	fmt.Printf("we have a total of %v tickets and %v are still available\n", confTickets, remainingTickets)
@@ -36,12 +36,10 @@ func main() {
 
 	booking = append(booking, firstName+" "+lastName)
 
-	fmt.Printf("whole array: %v\n", booking)
-	fmt.Printf("first val: %v\n", booking[0])
-	fmt.Printf("Type: %T\n", len(booking))
-
 	fmt.Printf("Thanks %v %v for booking %v tickets. Confirmation email has been sent to %v\n", firstName, lastName, userTickets, email)
 
 	fmt.Printf("%v %v tickets are currently remaining\n", remainingTickets, confName)
+
+	fmt.Printf("these are our current bookings %v", booking)
 
 }
