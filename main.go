@@ -41,7 +41,7 @@ func main() {
 
 		fmt.Printf("%v %v tickets are currently remaining\n", remainingTickets, confName)
 
-		fmt.Printf("these are our current bookings %v", booking)
+		fmt.Printf("these are our current bookings %v\n", booking)
 	}
 
 }
