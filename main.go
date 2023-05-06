@@ -53,8 +53,7 @@ func main() {
 
 		fmt.Printf("the first names of bookings are %v\n", firstNames)
 
-		noRemainingTickets := remainingTickets == 0
-		if noRemainingTickets {
+		if remainingTickets == 0 {
 			// end for loop
 
 			fmt.Println("Tickets are sold out")
