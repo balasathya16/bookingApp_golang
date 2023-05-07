@@ -37,7 +37,8 @@ func main() {
 		fmt.Scan(&userTickets)
 
 		if userTickets > remainingTickets {
-			fmt.Printf("we only have %v tickets remaining\n", remainingTickets)
+			fmt.Printf("we only have %v tickets remaining, you can't book %v tickets!\n", remainingTickets, userTickets)
+			break
 		}
 
 		remainingTickets = remainingTickets - userTickets
