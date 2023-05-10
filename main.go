@@ -62,7 +62,7 @@ func main() {
 
 			}
 		} else {
-			fmt.Printf("we only have %v tickets remaining, you can't book %v tickets!\n", remainingTickets, userTickets)
+			fmt.Println("Your input is invalid, try again.")
 			continue
 
 		}
