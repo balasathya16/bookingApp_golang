@@ -40,7 +40,7 @@ func main() {
 		isValidEmail := strings.Contains(email, "@")
 		isValidTicket := userTickets > 0 && userTickets <= remainingTickets
 
-		if isValidTicket {
+		if isValidName && isValidEmail && isValidTicket {
 			remainingTickets = remainingTickets - userTickets
 			booking = append(booking, firstName+" "+lastName)
 
