@@ -17,7 +17,7 @@ func main() {
 	fmt.Printf("we have a total of %v tickets and %v are still available\n", confTickets, remainingTickets)
 	fmt.Println("GET YOUR TICKETS HERE")
 
-	for {
+	for remainingTickets > 0 && len(booking) < 100 {
 		var firstName string
 		var lastName string
 		var email string
@@ -60,7 +60,7 @@ func main() {
 		} else {
 			fmt.Printf("we only have %v tickets remaining, you can't book %v tickets!\n", remainingTickets, userTickets)
 			continue
-			//test
+
 		}
 	}
 }
