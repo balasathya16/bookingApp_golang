@@ -13,6 +13,8 @@ func main() {
 	var remainingTickets uint = 100
 	booking := []string{}
 
+	greetUsers()
+
 	fmt.Printf("Welcome to %v booking\n", confName)
 	fmt.Printf("we have a total of %v tickets and %v are still available\n", confTickets, remainingTickets)
 	fmt.Println("GET YOUR TICKETS HERE")
@@ -74,4 +76,9 @@ func main() {
 
 		}
 	}
+}
+
+func greetUsers() {
+	fmt.Println("Welcome to our conference")
+
 }
