@@ -48,6 +48,7 @@ func main() {
 			// call print first name function here
 
 			printFirstNames(booking)
+
 			if remainingTickets == 0 {
 				// end for loop
 				fmt.Println("Tickets are sold out")
@@ -76,12 +77,12 @@ func greetUsers(conferenceName string, confTicks int, remainTicks uint) {
 
 }
 
-func printFirstNames(booking []string) {
+func printFirstNames(booking []string) []string {
 	firstNames := []string{}
 	for _, bookings := range booking {
 		var names = strings.Fields(bookings)
 		firstNames = append(firstNames, names[0])
 
 	}
-	fmt.Printf("the first names of bookings are %v\n", firstNames)
+	return firstNames
 }
