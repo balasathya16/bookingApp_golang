@@ -47,7 +47,8 @@ func main() {
 
 			// call print first name function here
 
-			printFirstNames(booking)
+			firstNames := getFirstNames(booking)
+			fmt.Printf("The first names for the bookings are %v\n", firstNames)
 
 			if remainingTickets == 0 {
 				// end for loop
@@ -77,7 +78,7 @@ func greetUsers(conferenceName string, confTicks int, remainTicks uint) {
 
 }
 
-func printFirstNames(booking []string) []string {
+func getFirstNames(booking []string) []string {
 	firstNames := []string{}
 	for _, bookings := range booking {
 		var names = strings.Fields(bookings)
