@@ -22,6 +22,7 @@ func main() {
 
 		if isValidName && isValidEmail && isValidTicket {
 
+			bookTicket(remainingTickets, userTickets, booking, firstName, lastName, email, confName)
 			// call print first name function here
 
 			firstNames := getFirstNames(booking)
