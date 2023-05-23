@@ -5,13 +5,14 @@ import (
 	"strings"
 )
 
+var confName = "IPL CSK tickets"
+
+const confTickets = 100
+
+var remainingTickets uint = 100
+var booking = []string{}
+
 func main() {
-
-	var confName = "IPL CSK tickets"
-
-	const confTickets = 100
-	var remainingTickets uint = 100
-	booking := []string{}
 
 	greetUsers(confName, confTickets, remainingTickets)
 
