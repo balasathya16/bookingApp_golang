@@ -5,16 +5,15 @@ import (
 	"strings"
 )
 
-var confName = "IPL CSK tickets"
-
 const confTickets = 100
 
+var confName = "IPL CSK tickets"
 var remainingTickets uint = 100
 var booking = []string{}
 
 func main() {
 
-	greetUsers(confName, confTickets, remainingTickets)
+	greetUsers()
 
 	for {
 
@@ -50,9 +49,9 @@ func main() {
 	}
 }
 
-func greetUsers(conferenceName string, confTicks int, remainTicks uint) {
-	fmt.Printf("Welcome to %v booking\n", conferenceName)
-	fmt.Printf("we have a total of %v tickets and %v are still available\n", confTicks, remainTicks)
+func greetUsers() {
+	fmt.Printf("Welcome to %v booking\n", confName)
+	fmt.Printf("we have a total of %v tickets and %v are still available\n", confTickets, remainingTickets)
 	fmt.Println("GET YOUR TICKETS HERE")
 
 }
