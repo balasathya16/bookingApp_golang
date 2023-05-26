@@ -25,7 +25,7 @@ func main() {
 			bookTicket(remainingTickets, userTickets, booking, firstName, lastName, email, confName)
 			// call print first name function here
 
-			firstNames := getFirstNames(booking)
+			firstNames := getFirstNames()
 			fmt.Printf("The first names for the bookings are %v\n", firstNames)
 
 			if remainingTickets == 0 {
@@ -56,7 +56,7 @@ func greetUsers() {
 
 }
 
-func getFirstNames(booking []string) []string {
+func getFirstNames() []string {
 	firstNames := []string{}
 	for _, bookings := range booking {
 		var names = strings.Fields(bookings)
