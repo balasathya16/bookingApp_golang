@@ -18,11 +18,11 @@ func main() {
 	for {
 
 		firstName, lastName, email, userTickets := getUserInput()
-		isValidName, isValidEmail, isValidTicket := validateUserInput(firstName, lastName, email, userTickets, remainingTickets)
+		isValidName, isValidEmail, isValidTicket := validateUserInput(firstName, lastName, email, userTickets)
 
 		if isValidName && isValidEmail && isValidTicket {
 
-			bookTicket(remainingTickets, userTickets, booking, firstName, lastName, email, confName)
+			bookTicket(userTickets, firstName, lastName, email)
 			// call print first name function here
 
 			firstNames := getFirstNames()
@@ -66,7 +66,7 @@ func getFirstNames() []string {
 	return firstNames
 }
 
-func validateUserInput(firstName string, lastName string, email string, userTickets uint, remainingTickets uint) (bool, bool, bool) {
+func validateUserInput(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
 	isValidName := len(firstName) >= 2 && len(lastName) >= 2
 	isValidEmail := strings.Contains(email, "@")
 	isValidTicket := userTickets > 0 && userTickets <= remainingTickets
@@ -95,7 +95,7 @@ func getUserInput() (string, string, string, uint) {
 	return firstName, lastName, email, userTickets
 }
 
-func bookTicket(remainingTickets uint, userTickets uint, booking []string, firstName string, lastName string, email string, confName string) {
+func bookTicket(userTickets uint, firstName string, lastName string, email string) {
 
 	remainingTickets = remainingTickets - userTickets
 	booking = append(booking, firstName+" "+lastName)
