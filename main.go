@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bookingApp_golang/helper"
 	"fmt"
 	"strings"
 )
@@ -19,7 +18,7 @@ func main() {
 	for {
 
 		firstName, lastName, email, userTickets := getUserInput()
-		isValidName, isValidEmail, isValidTicket := helper.ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
+		isValidName, isValidEmail, isValidTicket := validateUserInput(firstName, lastName, email, userTickets)
 
 		if isValidName && isValidEmail && isValidTicket {
 
@@ -96,4 +95,11 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 
 	fmt.Printf("Thanks %v %v for booking %v tickets. Confirmation email has been sent to %v\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v %v tickets are currently remaining\n", remainingTickets, confName)
+}
+
+func validateUserInput(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
+	isValidName := len(firstName) >= 2 && len(lastName) >= 2
+	isValidEmail := strings.Contains(email, "@")
+	isValidTicket := userTickets > 0 && userTickets <= remainingTickets
+	return isValidName, isValidEmail, isValidTicket
 }
