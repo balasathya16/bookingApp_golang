@@ -91,6 +91,11 @@ func getUserInput() (string, string, string, uint) {
 func bookTicket(userTickets uint, firstName string, lastName string, email string) {
 
 	remainingTickets = remainingTickets - userTickets
+
+	// creating a map
+
+	var userData = make(map[string]string)
+
 	booking = append(booking, firstName+" "+lastName)
 
 	fmt.Printf("Thanks %v %v for booking %v tickets. Confirmation email has been sent to %v\n", firstName, lastName, userTickets, email)
