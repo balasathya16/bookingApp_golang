@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -97,6 +98,8 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 	var userData = make(map[string]string)
 	userData["firstName"] = firstName
 	userData["lastName"] = lastName
+	userData["email"] = email
+	userData["userTickets"] = strconv.FormatUint(uint64(userTickets), 10)
 
 	booking = append(booking, firstName+" "+lastName)
 
