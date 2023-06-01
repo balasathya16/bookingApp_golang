@@ -95,6 +95,8 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 	// creating a map
 
 	var userData = make(map[string]string)
+	userData["firstName"] = firstName
+	userData["lastName"] = lastName
 
 	booking = append(booking, firstName+" "+lastName)
 
