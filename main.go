@@ -10,7 +10,7 @@ const confTickets = 100
 
 var confName = "IPL CSK tickets"
 var remainingTickets uint = 100
-var booking = []string{}
+var booking = make([]map[string]string, 0)
 
 func main() {
 
