@@ -60,8 +60,7 @@ func greetUsers() {
 func getFirstNames() []string {
 	firstNames := []string{}
 	for _, bookings := range booking {
-		var names = strings.Fields(bookings)
-		firstNames = append(firstNames, names[0])
+		firstNames = append(firstNames, bookings["firstName"])
 
 	}
 	return firstNames
