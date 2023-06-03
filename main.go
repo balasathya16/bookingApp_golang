@@ -101,7 +101,7 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 	userData["email"] = email
 	userData["userTickets"] = strconv.FormatUint(uint64(userTickets), 10)
 
-	booking = append(booking, firstName+" "+lastName)
+	booking = append(booking, userData)
 
 	fmt.Printf("Thanks %v %v for booking %v tickets. Confirmation email has been sent to %v\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v %v tickets are currently remaining\n", remainingTickets, confName)
