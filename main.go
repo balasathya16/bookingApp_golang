@@ -12,6 +12,13 @@ var confName = "IPL CSK tickets"
 var remainingTickets uint = 100
 var booking = make([]map[string]string, 0)
 
+type UserData struct {
+	firstName   string
+	lastName    string
+	email       string
+	userTickets uint
+}
+
 func main() {
 
 	greetUsers()
