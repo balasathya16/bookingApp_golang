@@ -30,6 +30,8 @@ func main() {
 		if isValidName && isValidEmail && isValidTicket {
 
 			bookTicket(userTickets, firstName, lastName, email)
+			sendTicket(userTickets, firstName, lastName, email)
+
 			// call print first name function here
 
 			firstNames := getFirstNames()
@@ -123,5 +125,8 @@ func validateUserInput(firstName string, lastName string, email string, userTick
 
 func sendTicket(userTickets uint, firstName string, lastName string, email string) {
 	var ticket = fmt.Sprintf("%v tickets booked for %v %v\n", userTickets, firstName, lastName)
-	fmt.Printf("sending ticket to %v to email: %v", ticket, email)
+	fmt.Printf("################")
+	fmt.Printf("sending ticket\n to %v \nto email: %v\n", ticket, email)
+	fmt.Printf("################")
+
 }
