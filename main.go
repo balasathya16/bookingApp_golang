@@ -121,6 +121,7 @@ func validateUserInput(firstName string, lastName string, email string, userTick
 	return isValidName, isValidEmail, isValidTicket
 }
 
-func sendTicket(userTickets uint, firstName string, lastName string) {
-	fmt.Printf("%v tickets booked for %v %v\n", userTickets, firstName, lastName)
+func sendTicket(userTickets uint, firstName string, lastName string, email string) {
+	var ticket = fmt.Sprintf("%v tickets booked for %v %v\n", userTickets, firstName, lastName)
+	fmt.Printf("sending ticket to %v to email: %v", ticket, email)
 }
