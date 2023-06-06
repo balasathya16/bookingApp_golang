@@ -120,3 +120,7 @@ func validateUserInput(firstName string, lastName string, email string, userTick
 	isValidTicket := userTickets > 0 && userTickets <= remainingTickets
 	return isValidName, isValidEmail, isValidTicket
 }
+
+func sendTicket(userTickets uint, firstName string, lastName string) {
+	fmt.Printf("%v tickets booked for %v %v\n", userTickets, firstName, lastName)
+}
