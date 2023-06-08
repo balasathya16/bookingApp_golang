@@ -127,6 +127,6 @@ func sendTicket(userTickets uint, firstName string, lastName string, email strin
 	var ticket = fmt.Sprintf("%v tickets for %v %v", userTickets, firstName, lastName)
 	fmt.Println("################")
 	fmt.Printf("sending ticket:\n %v \nto email: %v\n", ticket, email)
-	fmt.Printf("################")
+	fmt.Println("################")
 
 }
