@@ -124,9 +124,9 @@ func validateUserInput(firstName string, lastName string, email string, userTick
 }
 
 func sendTicket(userTickets uint, firstName string, lastName string, email string) {
-	var ticket = fmt.Sprintf("%v tickets booked for %v %v\n", userTickets, firstName, lastName)
-	fmt.Printf("################")
-	fmt.Printf("sending ticket\n to %v \nto email: %v\n", ticket, email)
+	var ticket = fmt.Sprintf("%v tickets for %v %v", userTickets, firstName, lastName)
+	fmt.Println("################")
+	fmt.Printf("sending ticket:\n %v \nto email: %v\n", ticket, email)
 	fmt.Printf("################")
 
 }
