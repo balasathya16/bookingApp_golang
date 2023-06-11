@@ -23,39 +23,36 @@ func main() {
 
 	greetUsers()
 
-	for {
+	firstName, lastName, email, userTickets := getUserInput()
+	isValidName, isValidEmail, isValidTicket := validateUserInput(firstName, lastName, email, userTickets)
 
-		firstName, lastName, email, userTickets := getUserInput()
-		isValidName, isValidEmail, isValidTicket := validateUserInput(firstName, lastName, email, userTickets)
+	if isValidName && isValidEmail && isValidTicket {
 
-		if isValidName && isValidEmail && isValidTicket {
+		bookTicket(userTickets, firstName, lastName, email)
+		go sendTicket(userTickets, firstName, lastName, email)
 
-			bookTicket(userTickets, firstName, lastName, email)
-			go sendTicket(userTickets, firstName, lastName, email)
+		// call print first name function here
 
-			// call print first name function here
+		firstNames := getFirstNames()
+		fmt.Printf("The first names for the bookings are %v\n", firstNames)
 
-			firstNames := getFirstNames()
-			fmt.Printf("The first names for the bookings are %v\n", firstNames)
-
-			if remainingTickets == 0 {
-				// end for loop
-				fmt.Println("Tickets are sold out")
-				break
-
-			}
-		} else {
-			if !isValidName {
-				fmt.Println("first name or last name is too short")
-			}
-			if !isValidEmail {
-				fmt.Println("invalid email")
-			}
-			if !isValidTicket {
-				fmt.Println("invalid number of tickets")
-			}
+		if remainingTickets == 0 {
+			// end for loop
+			fmt.Println("Tickets are sold out")
+			break
 
 		}
+	} else {
+		if !isValidName {
+			fmt.Println("first name or last name is too short")
+		}
+		if !isValidEmail {
+			fmt.Println("invalid email")
+		}
+		if !isValidTicket {
+			fmt.Println("invalid number of tickets")
+		}
+
 	}
 }
 
