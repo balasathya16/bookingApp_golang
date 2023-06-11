@@ -125,7 +125,7 @@ func validateUserInput(firstName string, lastName string, email string, userTick
 }
 
 func sendTicket(userTickets uint, firstName string, lastName string, email string) {
-	time.Sleep(10 * time.Second)
+	time.Sleep(60 * time.Second)
 	var ticket = fmt.Sprintf("%v tickets for %v %v", userTickets, firstName, lastName)
 	fmt.Println("################")
 	fmt.Printf("sending ticket:\n %v \nto email: %v\n", ticket, email)
