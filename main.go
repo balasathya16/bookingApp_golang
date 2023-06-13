@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -19,6 +20,8 @@ type UserData struct {
 	userTickets uint
 }
 
+var wg = sync.WaitGroup{}
+
 func main() {
 
 	greetUsers()
@@ -29,6 +32,7 @@ func main() {
 	if isValidName && isValidEmail && isValidTicket {
 
 		bookTicket(userTickets, firstName, lastName, email)
+		wg.Add(1)
 		go sendTicket(userTickets, firstName, lastName, email)
 
 		// call print first name function here
@@ -39,7 +43,7 @@ func main() {
 		if remainingTickets == 0 {
 			// end for loop
 			fmt.Println("Tickets are sold out")
-			break
+			// break
 
 		}
 	} else {
